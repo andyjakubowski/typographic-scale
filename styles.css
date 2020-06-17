@@ -1,6 +1,24 @@
 @font-face {
-  font-family: 'Concourse T3';
+  font-family: 'Concourse T3 Regular';
   src: url('/fonts/concourse_t3_regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Concourse T3 Bold';
+  src: url('/fonts/concourse_t3_bold.woff') format('woff');
+}
+
+:root {
+  --ratio: 1.414;
+  --scale-base: 1.25rem;
+  --scale-neg-1: calc(var(--scale-base) / var(--ratio));
+  --scale-neg-2: calc(var(--scale-neg-1) / var(--ratio));
+  --scale-1: calc(var(--scale-base) * var(--ratio));
+  --scale-2: calc(var(--scale-1) * var(--ratio));
+  --scale-3: calc(var(--scale-2) * var(--ratio));
+  --scale-4: calc(var(--scale-3) * var(--ratio));
+  --scale-5: calc(var(--scale-4) * var(--ratio));
+  --scale-6: calc(var(--scale-5) * var(--ratio));
 }
 
 body {
@@ -8,8 +26,6 @@ body {
 
   color: #fafafa;
   background-color: #141414;
-
-  font-family: 'Concourse T3', serif;
 }
 
 .section-1 {
@@ -18,8 +34,43 @@ body {
 }
 
 .section-1 * {
+  margin-block-start: 1rem;
+  margin-block-end: 1rem;
+
   grid-column: content;
+
+  font-family: 'Concourse T3 Regular', serif;
   font-weight: 400;
+}
+
+.section-1 p {
+  font-size: var(--scale-base);
+}
+
+.section-1 h6 {
+  font-size: var(--scale-1);
+}
+
+.section-1 h5 {
+  font-size: var(--scale-2);
+}
+
+.section-1 h4 {
+  font-size: var(--scale-3);
+}
+
+.section-1 h3 {
+  font-size: var(--scale-4);
+  font-family: 'Concourse T3 Bold', serif;
+}
+
+.section-1 h2 {
+  font-size: var(--scale-5);
+}
+
+.section-1 h1 {
+  font-size: var(--scale-6);
+  font-family: 'Concourse T3 Bold', serif;
 }
 
 /* Positioning */
