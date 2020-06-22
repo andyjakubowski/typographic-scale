@@ -1,6 +1,21 @@
 @font-face {
+  font-family: 'Concourse C3 Regular';
+  src: url('/fonts/concourse_c3_regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Concourse C3 Bold';
+  src: url('/fonts/concourse_c3_bold.woff') format('woff');
+}
+
+@font-face {
   font-family: 'Concourse T3 Regular';
   src: url('/fonts/concourse_t3_regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Concourse T3 Italic';
+  src: url('/fonts/concourse_t3_italic.woff') format('woff');
 }
 
 @font-face {
@@ -8,69 +23,145 @@
   src: url('/fonts/concourse_t3_bold.woff') format('woff');
 }
 
+@font-face {
+  font-family: 'Concourse T7 Regular';
+  src: url('/fonts/concourse_t7_regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Concourse T8 Regular';
+  src: url('/fonts/concourse_t8_regular.woff') format('woff');
+}
+
 :root {
-  --ratio: 1.414;
-  --scale-base: 1.25rem;
-  --scale-neg-1: calc(var(--scale-base) / var(--ratio));
+  font-size: 125%;
+  --ratio: 1.25;
+  --scale-1: 1rem;
+  --scale-neg-1: calc(var(--scale-1) / var(--ratio));
   --scale-neg-2: calc(var(--scale-neg-1) / var(--ratio));
-  --scale-1: calc(var(--scale-base) * var(--ratio));
   --scale-2: calc(var(--scale-1) * var(--ratio));
   --scale-3: calc(var(--scale-2) * var(--ratio));
   --scale-4: calc(var(--scale-3) * var(--ratio));
   --scale-5: calc(var(--scale-4) * var(--ratio));
   --scale-6: calc(var(--scale-5) * var(--ratio));
+  --scale-7: calc(var(--scale-6) * var(--ratio));
 }
 
 body {
   margin: 0;
 
-  color: #fafafa;
-  background-color: #141414;
+  background-color: #17171a;
+  /* background-color: black; */
+
+  color: #dcdce3;
+
+  font-family: 'Concourse T3 Regular', sans-serif;
+  line-height: 1.4;
 }
 
-.section-1 {
-  display: grid;
-  grid-template-columns: 1fr [content] 6fr 1fr;
+main {
+  margin-block-start: 5em;
+  margin-block-end: 3em;
+  margin-inline-start: 5vw;
+  margin-inline-end: 5vw;
 }
 
-.section-1 * {
-  margin-block-start: 1rem;
-  margin-block-end: 1rem;
-
-  grid-column: content;
-
-  font-family: 'Concourse T3 Regular', serif;
-  font-weight: 400;
+.tiny-text {
+  font-size: var(--scale-neg-2);
 }
 
-.section-1 p {
-  font-size: var(--scale-base);
+.small-text {
+  /* margin-block-start: 0.6em; */
+  margin-block-end: 0.6em;
+  font-size: var(--scale-neg-1);
 }
 
-.section-1 h6 {
+p {
+  margin-block-start: 0.75em;
+  margin-block-end: 0.75em;
+
   font-size: var(--scale-1);
 }
 
-.section-1 h5 {
+strong {
+  font-family: 'Concourse T3 Bold';
+  font-weight: normal;
+}
+
+.large-body-text {
+  color: #ffc957;
+
   font-size: var(--scale-2);
 }
 
-.section-1 h4 {
+h3 {
+  margin-block-start: 0.6em;
+  margin-block-end: 0.6em;
+
   font-size: var(--scale-3);
+  font-family: 'Concourse T3 Bold', serif;
+  line-height: 1.3;
 }
 
-.section-1 h3 {
+h2 {
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+
   font-size: var(--scale-4);
-  font-family: 'Concourse T3 Bold', serif;
+  font-family: 'Concourse C3 Regular', serif;
+  line-height: 0.95;
+  text-transform: lowercase;
 }
 
-.section-1 h2 {
+h1 {
+  margin-block-start: 0.4em;
+  margin-block-end: 0.4em;
+
   font-size: var(--scale-5);
+  font-family: 'Concourse T7 Regular', serif;
+  line-height: 1;
 }
 
-.section-1 h1 {
+header h1 {
+  font-family: 'Concourse T3 Regular', serif;
+  font-size: var(--scale-2);
+}
+
+.massive-text {
+  color: #ba2020;
+  font-family: 'Concourse T8 Regular', serif;
   font-size: var(--scale-6);
-  font-family: 'Concourse T3 Bold', serif;
+  line-height: 1;
+  text-align: right;
+}
+
+figure {
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+figcaption {
+  font-family: 'Concourse T3 Italic', sans-serif;
+}
+
+@media screen and (min-width: 48em) {
+  :root {
+    --ratio: 1.414;
+    font-size: 150%;
+  }
+
+  main {
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+
+    width: 70vw;
+    max-width: 28rem;
+  }
 }
 
 /* Positioning */
