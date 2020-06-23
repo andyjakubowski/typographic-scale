@@ -1,36 +1,46 @@
 @font-face {
-  font-family: 'Concourse C3 Regular';
+  font-family: 'Concourse C3';
   src: url('/fonts/concourse_c3_regular.woff') format('woff');
+  font-weight: 400;
 }
 
 @font-face {
-  font-family: 'Concourse C3 Bold';
+  font-family: 'Concourse C3';
   src: url('/fonts/concourse_c3_bold.woff') format('woff');
+  font-weight: 700;
 }
 
 @font-face {
-  font-family: 'Concourse T3 Regular';
+  font-family: 'Concourse T3';
   src: url('/fonts/concourse_t3_regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: 'Concourse T3 Italic';
+  font-family: 'Concourse T3';
   src: url('/fonts/concourse_t3_italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
 }
 
 @font-face {
-  font-family: 'Concourse T3 Bold';
+  font-family: 'Concourse T3';
   src: url('/fonts/concourse_t3_bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: 'Concourse T7 Regular';
+  font-family: 'Concourse T7';
   src: url('/fonts/concourse_t7_regular.woff') format('woff');
+  font-weight: 400;
 }
 
 @font-face {
-  font-family: 'Concourse T8 Regular';
+  font-family: 'Concourse T8';
   src: url('/fonts/concourse_t8_regular.woff') format('woff');
+  font-weight: 400;
 }
 
 :root {
@@ -51,11 +61,10 @@ body {
   margin: 0;
 
   background-color: #17171a;
-  /* background-color: black; */
 
   color: #dcdce3;
 
-  font-family: 'Concourse T3 Regular', sans-serif;
+  font-family: 'Concourse T3', sans-serif;
   line-height: 1.4;
 }
 
@@ -71,7 +80,6 @@ main {
 }
 
 .small-text {
-  /* margin-block-start: 0.6em; */
   margin-block-end: 0.6em;
   font-size: var(--scale-neg-1);
 }
@@ -84,8 +92,7 @@ p {
 }
 
 strong {
-  font-family: 'Concourse T3 Bold';
-  font-weight: normal;
+  font-weight: 700;
 }
 
 .large-body-text {
@@ -99,8 +106,16 @@ h3 {
   margin-block-end: 0.6em;
 
   font-size: var(--scale-3);
-  font-family: 'Concourse T3 Bold', serif;
   line-height: 1.3;
+}
+
+.temp-special {
+  font-size: 48px;
+}
+
+.temp-special-2 {
+  font-size: 48px;
+  font-weight: 700;
 }
 
 h2 {
@@ -108,7 +123,8 @@ h2 {
   margin-block-end: 0.5em;
 
   font-size: var(--scale-4);
-  font-family: 'Concourse C3 Regular', serif;
+  font-family: 'Concourse C3', serif;
+  font-weight: 400;
   line-height: 0.95;
   text-transform: lowercase;
 }
@@ -118,18 +134,17 @@ h1 {
   margin-block-end: 0.4em;
 
   font-size: var(--scale-5);
-  font-family: 'Concourse T7 Regular', serif;
+  font-family: 'Concourse T7', serif;
   line-height: 1;
 }
 
 header h1 {
-  font-family: 'Concourse T3 Regular', serif;
   font-size: var(--scale-2);
 }
 
 .massive-text {
   color: #ba2020;
-  font-family: 'Concourse T8 Regular', serif;
+  font-family: 'Concourse T8', serif;
   font-size: var(--scale-6);
   line-height: 1;
   text-align: right;
@@ -146,7 +161,7 @@ img {
 }
 
 figcaption {
-  font-family: 'Concourse T3 Italic', sans-serif;
+  font-style: italic;
 }
 
 @media screen and (min-width: 48em) {
