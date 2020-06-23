@@ -46,9 +46,9 @@
 :root {
   font-size: 125%;
   --ratio: 1.25;
+  --scale-negative-1: calc(var(--scale-1) / var(--ratio));
+  --scale-negative-2: calc(var(--scale-negative-1) / var(--ratio));
   --scale-1: 1rem;
-  --scale-neg-1: calc(var(--scale-1) / var(--ratio));
-  --scale-neg-2: calc(var(--scale-neg-1) / var(--ratio));
   --scale-2: calc(var(--scale-1) * var(--ratio));
   --scale-3: calc(var(--scale-2) * var(--ratio));
   --scale-4: calc(var(--scale-3) * var(--ratio));
@@ -76,12 +76,12 @@ main {
 }
 
 .tiny-text {
-  font-size: var(--scale-neg-2);
+  font-size: var(--scale-negative-2);
 }
 
 .small-text {
   margin-block-end: 0.6em;
-  font-size: var(--scale-neg-1);
+  font-size: var(--scale-negative-1);
 }
 
 p {
